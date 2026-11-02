@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>discommand</title>
+  <meta name="description" content="discommand is a small, vim-style terminal client for Discord, WhatsApp, Matrix, Google Calendar, Microsoft To Do and Twos, written in Rust.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #f6f6f4;
+      --fg: #161616;
+      --muted: #5c5c5c;
+      --line: #dcdcd8;
+      --btn-bg: #161616;
+      --btn-fg: #f6f6f4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --fg: #ececec;
+        --muted: #a0a0a0;
+        --line: #2a2a2a;
+        --btn-bg: #ececec;
+        --btn-fg: #111111;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 72px 20px 48px;
+      text-align: center;
+    }
+    .logo { width: 120px; height: auto; color: var(--fg); }
+    h1 {
+      font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 20px 0 8px;
+    }
+    .tagline { font-size: 1.15rem; margin: 0 0 28px; }
+    p { color: var(--muted); margin: 0 0 16px; }
+    .platforms {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .platforms li {
+      font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+      font-size: 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 3px 10px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 8px;
+    }
+    .button:hover { opacity: 0.88; }
+    .button svg { width: 20px; height: 20px; fill: currentColor; }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: 24px 20px 32px;
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="logo" viewBox="0 0 95.38 79.92" role="img" aria-label="discommand logo">
+      <path fill="currentColor" d="M 47.69,20.40 L 38.81,20.50 L 19.98,2.00 L 32.08,21.70 L 22.54,21.70 L 2.00,50.79 L 22.11,70.47 L 41.31,77.92 L 25.88,60.67 L 22.11,70.47"/>
+      <path fill="currentColor" d="M 47.69,20.40 L 56.57,20.50 L 75.40,2.00 L 63.30,21.70 L 72.84,21.70 L 93.38,50.79 L 73.27,70.47 L 54.07,77.92 L 69.50,60.67 L 73.27,70.47"/>
+    </svg>
+    <h1>discommand</h1>
+    <p class="tagline">A small, vim-style terminal client for your chats, calendar and tasks.</p>
+    <p>
+      discommand brings Discord, WhatsApp, Matrix, Google Calendar, Microsoft To Do and Twos
+      into one keyboard-driven terminal app. It's written in Rust, redraws only when something
+      changes and runs on Windows, Linux and macOS.
+    </p>
+    <p>It's free and open source. Everything runs on your own computer.</p>
+    <ul class="platforms">
+      <li>Discord</li>
+      <li>WhatsApp</li>
+      <li>Matrix</li>
+      <li>Google Calendar</li>
+      <li>Microsoft To Do</li>
+      <li>Twos</li>
+    </ul>
+    <a class="button" href="https://github.com/Kollerman/discommand">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      View on GitHub
+    </a>
+  </main>
+  <footer>
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+</body>
+</html>
